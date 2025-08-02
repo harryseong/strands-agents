@@ -1,6 +1,7 @@
 # Terraform
 **/.terraform
 **/.terraform.lock.hcl
+**/**.zip
 
 # Frontend - Web App
 **/node_modules
@@ -10,5 +11,6 @@
 **/package-lock.json
 
 # Backend - Agent
-repl_state/repl_state.pkl
 .venv
+**/__pycache__
+repl_state/repl_state.pkl
