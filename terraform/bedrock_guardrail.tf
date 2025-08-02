@@ -1,14 +1,34 @@
 resource "aws_bedrock_guardrail" "kb" {
-  name                      = "example"
+  name                      = "bedrock-kb-guardail"
   blocked_input_messaging   = "example"
   blocked_outputs_messaging = "example"
-  description               = "example"
+  description               = "Guardrail for knowledge base interactions"
 
   content_policy_config {
     filters_config {
-      input_strength  = "MEDIUM"
-      output_strength = "MEDIUM"
+      input_strength  = "HIGH"
+      output_strength = "HIGH"
       type            = "HATE"
+    }
+    filters_config {
+      input_strength  = "HIGH"
+      output_strength = "HIGH"
+      type            = "INSULTS"
+    }
+    filters_config {
+      input_strength  = "HIGH"
+      output_strength = "HIGH"
+      type            = "MISCONDUCT"
+    }
+    filters_config {
+      input_strength  = "HIGH"
+      output_strength = "HIGH"
+      type            = "SEXUAL"
+    }
+    filters_config {
+      input_strength  = "HIGH"
+      output_strength = "HIGH"
+      type            = "VIOLENCE"
     }
   }
 
@@ -16,13 +36,6 @@ resource "aws_bedrock_guardrail" "kb" {
     pii_entities_config {
       action = "BLOCK"
       type   = "NAME"
-    }
-
-    regexes_config {
-      action      = "BLOCK"
-      description = "example regex"
-      name        = "regex_example"
-      pattern     = "^\\d{3}-\\d{2}-\\d{4}$"
     }
   }
 
