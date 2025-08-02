@@ -1,0 +1,142 @@
+@import 'variables';
+
+.message-bubble {
+  width: 100%;
+  
+  &.user {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  &.ai {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.message-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 85%;
+  
+  @media (max-width: 768px) {
+    max-width: 90%;
+    gap: 8px;
+  }
+}
+
+.message-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 14px !important;
+  flex-shrink: 0;
+  
+  &.ai-avatar {
+    background: $avatar-ai-bg !important;
+    box-shadow: $avatar-ai-shadow;
+  }
+  
+  &.user-avatar {
+    background: $avatar-user-bg !important;
+    box-shadow: $avatar-user-shadow;
+  }
+  
+  @media (max-width: 768px) {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+.message-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.message-text {
+  border-radius: $border-radius-md;
+  padding: 12px 16px;
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  
+  &.user-text {
+    background: $bubble-user-bg;
+    border: 1px solid $bubble-user-border;
+    color: $text-primary;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: $border-radius-md;
+      background: $bubble-user-overlay;
+      pointer-events: none;
+    }
+  }
+  
+  &.ai-text {
+    background: $bubble-ai-bg;
+    border: 1px solid $bubble-ai-border;
+    color: $text-primary;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: $border-radius-md;
+      background: $bubble-ai-overlay;
+      pointer-events: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+}
+
+.message-timestamp {
+  color: $text-muted !important;
+  font-size: 0.75rem !important;
+  margin-left: 8px;
+  margin-top: 2px;
+  
+  .user & {
+    text-align: right;
+  }
+}
+
+.error-chip {
+  margin-top: 8px !important;
+  align-self: flex-start;
+}
+
+.streaming-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: $gradient-primary;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  border-radius: 1px;
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+}

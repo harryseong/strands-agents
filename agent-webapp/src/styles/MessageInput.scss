@@ -1,0 +1,131 @@
+@import 'variables';
+
+.message-input-paper {
+  background: $bg-input !important;
+  border-radius: $border-radius-xl !important;
+  border: 1px solid $border-hover;
+  backdrop-filter: blur(10px);
+  padding: 8px !important;
+  
+  &:hover {
+    border-color: $border-hover;
+  }
+}
+
+.message-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.message-input {
+  .MuiOutlinedInput-root {
+    border-radius: $border-radius-lg !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid $border-input;
+    
+    &:hover {
+      border-color: $border-hover;
+    }
+    
+    &.Mui-focused {
+      border-color: $border-focus;
+      box-shadow: $shadow-glow-primary;
+    }
+    
+    &.Mui-disabled {
+      background: rgba(255, 255, 255, 0.01);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+  
+  .MuiOutlinedInput-notchedOutline {
+    border: none !important;
+  }
+  
+  .MuiInputBase-input {
+    color: $text-primary !important;
+    padding: 14px 16px !important;
+    font-size: 16px;
+    line-height: 1.5;
+    
+    &::placeholder {
+      color: $text-muted !important;
+    }
+    
+    @media (max-width: 768px) {
+      padding: 12px 14px !important;
+      font-size: 16px; // Prevent zoom on iOS
+    }
+  }
+  
+  .MuiInputBase-inputMultiline {
+    min-height: 20px;
+    max-height: 120px;
+    overflow-y: auto !important;
+    resize: none;
+  }
+}
+
+.input-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.send-button {
+  background: $gradient-primary !important;
+  color: $text-primary !important;
+  border-radius: $border-radius-sm !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+  
+  &:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: $shadow-button-hover;
+  }
+  
+  &:disabled {
+    background: rgba(255, 255, 255, $opacity-disabled) !important;
+    color: $text-disabled !important;
+    transform: none;
+  }
+}
+
+.stop-button {
+  background: $error-bg !important;
+  color: $text-primary !important;
+  border-radius: $border-radius-sm !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $error-shadow;
+  }
+}
+
+.streaming-chip {
+  align-self: flex-start;
+  background: rgba(0, 245, 255, $opacity-disabled) !important;
+  color: $primary-color !important;
+  border: 1px solid $border-hover !important;
+  animation: pulse 2s infinite;
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 $glow-primary;
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(0, 245, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 245, 255, 0);
+    }
+  }
+}

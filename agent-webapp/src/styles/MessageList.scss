@@ -1,0 +1,10 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0;
+  
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,85 @@
+// Theme Colors
+$primary-color: #00f5ff;
+$primary-light: #66f7ff;
+$primary-dark: #00c4cc;
+
+$secondary-color: #ff0040; // Changed from magenta to red
+$secondary-light: #ff4066; // Changed from pink to light red
+$secondary-dark: #cc0033; // Changed from dark magenta to dark red
+
+$accent-color: #0099cc;
+$accent-light: #33aadd;
+$accent-dark: #006699;
+
+// Background Colors
+$bg-primary: #0a0a0a;
+$bg-secondary: #1a1a1a;
+$bg-paper: rgba(26, 26, 26, 0.95);
+$bg-input: rgba(26, 26, 26, 0.8);
+
+// Text Colors
+$text-primary: #ffffff;
+$text-secondary: #b0b0b0;
+$text-muted: rgba(255, 255, 255, 0.5);
+$text-disabled: rgba(255, 255, 255, 0.3);
+
+// Border Colors
+$border-primary: rgba(0, 245, 255, 0.1);
+$border-secondary: rgba(255, 255, 255, 0.05);
+$border-input: rgba(255, 255, 255, 0.1);
+$border-hover: rgba(0, 245, 255, 0.3);
+$border-focus: rgba(0, 245, 255, 0.5);
+
+// Gradients
+$gradient-primary: linear-gradient(45deg, #{$primary-color}, #{$secondary-color});
+$gradient-primary-light: linear-gradient(45deg, #{$primary-light}, #{$secondary-light});
+$gradient-bg: linear-gradient(135deg, #{$bg-primary} 0%, #{$bg-secondary} 100%);
+$gradient-header: linear-gradient(135deg, rgba(0, 245, 255, 0.02) 0%, rgba(255, 0, 64, 0.02) 100%);
+
+// Message Bubble Colors
+$bubble-user-bg: linear-gradient(135deg, rgba(255, 0, 64, 0.15), rgba(255, 0, 64, 0.08));
+$bubble-user-border: rgba(255, 0, 64, 0.2);
+$bubble-user-overlay: linear-gradient(135deg, rgba(255, 0, 64, 0.1), transparent);
+
+$bubble-ai-bg: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(0, 245, 255, 0.08));
+$bubble-ai-border: rgba(0, 245, 255, 0.2);
+$bubble-ai-overlay: linear-gradient(135deg, rgba(0, 245, 255, 0.1), transparent);
+
+// Avatar Colors
+$avatar-ai-bg: linear-gradient(45deg, #{$primary-color}, #{$accent-color});
+$avatar-ai-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+$avatar-user-bg: linear-gradient(45deg, #{$secondary-color}, #{$secondary-dark});
+$avatar-user-shadow: 0 0 15px rgba(255, 0, 64, 0.3);
+
+// Error Colors
+$error-color: #ff4444;
+$error-bg: linear-gradient(45deg, #{$error-color}, #ff0000);
+$error-shadow: 0 4px 20px rgba(255, 68, 68, 0.3);
+
+// Animation Colors
+$glow-primary: rgba(0, 245, 255, 0.4);
+$glow-secondary: rgba(255, 0, 64, 0.4);
+$selection-bg: rgba(0, 245, 255, 0.3);
+
+// Scrollbar Colors
+$scrollbar-track: rgba(255, 255, 255, 0.05);
+$scrollbar-thumb: $gradient-primary;
+$scrollbar-thumb-hover: $gradient-primary-light;
+
+// Opacity Values
+$opacity-backdrop: 0.95;
+$opacity-overlay: 0.8;
+$opacity-disabled: 0.1;
+$opacity-muted: 0.5;
+$opacity-secondary: 0.7;
+
+// Spacing
+$border-radius-sm: 12px;
+$border-radius-md: 18px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
+
+// Shadows
+$shadow-glow-primary: 0 0 20px rgba(0, 245, 255, 0.3);
+$shadow-glow-secondary: 0 0 20px rgba(255, 0, 64, 0.3);
+$shadow-button-hover: 0 4px 20px rgba(0, 245, 255, 0.3);

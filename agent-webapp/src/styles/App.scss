@@ -1,0 +1,58 @@
+@import 'variables';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $gradient-bg;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 0, 64, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// Global scrollbar styles
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-track;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $scrollbar-thumb-hover;
+  background-clip: content-box;
+}
+
+// Selection styles
+::selection {
+  background: $selection-bg;
+  color: $text-primary;
+}
+
+::-moz-selection {
+  background: $selection-bg;
+  color: $text-primary;
+}

@@ -1,0 +1,115 @@
+@import 'variables';
+
+.chat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.chat-paper {
+  height: 100%;
+  background: $bg-paper !important;
+  border-radius: $border-radius-lg !important;
+  border: 1px solid $border-primary;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-hover, transparent);
+  }
+}
+
+.chat-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid $border-secondary;
+  background: $gradient-header;
+
+  @media (max-width: 768px) {
+    padding: 16px 20px;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-button {
+  background: $gradient-primary !important;
+  color: $text-primary !important;
+  border-radius: $border-radius-sm !important;
+  padding: 8px !important;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-button-hover;
+  }
+}
+
+.logo-icon {
+  filter: drop-shadow(0 0 8px $glow-primary);
+}
+
+.chat-title {
+  font-weight: 600 !important;
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: $shadow-glow-primary;
+}
+
+.status-chip {
+  background: rgba(0, 245, 255, 0.1) !important;
+  color: $primary-color !important;
+  border-color: $border-hover !important;
+  
+  .MuiChip-icon {
+    color: $primary-color !important;
+  }
+}
+
+.chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  
+  @media (max-width: 768px) {
+    padding: 16px 20px;
+  }
+}
+
+.chat-input-container {
+  padding: 20px 24px;
+  border-top: 1px solid $border-secondary;
+  background: $gradient-header;
+  
+  @media (max-width: 768px) {
+    padding: 16px 20px;
+  }
+}
