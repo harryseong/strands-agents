@@ -59,3 +59,8 @@ variable "s3_inclusion_prefixes" {
   description = "Prefixes (folders) inside the S3 bucket to include in KB ingestion"
   default     = []
 }
+
+variable "bedrock_model_arn" {
+  type        = string
+  description = "ARN of the Bedrock model to use for the Lambda function"
+}

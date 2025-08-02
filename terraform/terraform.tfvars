@@ -11,3 +11,4 @@ embedding_model_arn        = "arn:aws:bedrock:us-east-1::foundation-model/amazon
 embedding_data_type        = "FLOAT32"
 field_text                 = "AMAZON_BEDROCK_TEXT"
 field_metadata             = "AMAZON_BEDROCK_METADATA"
+bedrock_model_arn          = "anthropic.claude-3-5-sonnet-20240620-v1:0"
